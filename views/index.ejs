@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>Skills</h1>
+    <ul>
+    <% for (skill of allSkills){ %>
+      <li><%=  skill.skillName %></li>
+      <% } %> 
+    </ul>
+ 
+  </body>
+</html>

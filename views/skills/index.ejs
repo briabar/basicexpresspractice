@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SKILLS</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>Skills</h1>
+    <ul>
+    <% for (skill of allSkills){ %>
+      <a href="skills/list_skills/<%= skill.id %>"> 
+        <li><%=  skill.skillName %> Level: <%= skill.level %> </li> 
+      </a> 
+      <form action="/skills/<%= skill.id %>?_method=DELETE"
+        class="delete-form" method="POST">
+        <button type="submit">X</button>
+      </form>
+      <% } %> 
+    <li><a href="skills/new_skill/">Add new skill.</a></li>
+    </ul>
+  </body>
+</html>
